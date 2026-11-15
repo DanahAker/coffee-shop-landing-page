@@ -1,0 +1,360 @@
+:root{
+    --primary-color: #2B1B17;
+    --secondary-color: #4F4442;
+    --background-color: #FFF8F3;
+    --tag-color: #845326;
+    --tag-background-color: #F6ECE2;
+    --borders-color: #D3C3C066;
+    --image-background-color: #F0E7DD;
+    --second-background-color: #FCF2E8;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    box-shadow: 0 6px 9px -10px var(--primary-color);
+
+}
+
+header .logo{
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .icon{
+    background-color: var(--primary-color);
+    padding: 9.25px;
+    border-radius: 4px;
+}
+
+header .logo span{
+    font-family: 'playfair display';
+    font-size: 36px;
+}
+
+header .pages-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+header .visit-us{
+    padding: 10px 24px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-radius: 12px;
+}
+
+header .burger-nav-icon {
+    padding: 6px 7px;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+} 
+
+
+.introduction{
+    padding: 90px 0px 95px;
+}
+
+.tag{
+    color: var(--tag-color);
+    font-size: 12px;
+    padding: 6px 14px;
+    background-color: var(--background-color);
+    border: 1px solid var(--tag-color);
+    border-radius: 12px;
+}
+
+.tag img{
+    padding-right: 8px;
+}
+
+.introduction .row{
+    gap: 64px;
+}
+
+.introduction_section{
+    flex: 1 1 350px;
+    min-width: 0;
+}
+
+.introduction h1{
+    padding: 24px 0px;
+}
+
+.introduction .buttons{
+    padding: 32px 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.brown-btn{
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 14px 28px;
+}
+
+.light-btn{
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color); 
+    padding: 14px 28px;
+}
+
+.introduction .statistics{
+    border-top: 1px solid var(--borders-color);
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.introduction .statistics h3{
+    font-size: 12px;
+    font-weight: 600;
+    border-left: 1px solid var(--borders-color);
+    padding-left: 16px;
+}
+
+.introduction .statistics h3:first-of-type{
+    border: none;
+    padding-left: 0;
+}
+
+.introduction .statistics h3 span{
+    display: block;
+    font-family: 'playfair display';
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 3.5px;
+}
+
+.introduction .ceramic_cup_div{
+    position: relative;
+    /* width: 100%; */
+}
+
+.introduction .ceramic_cup_div::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--image-background-color);
+    position: absolute;
+    transform: rotate(-2deg) scale(1.06);
+    border-radius: 12px;
+}
+
+.introduction .ceramic_cup_img{
+    background-color: white;
+    padding: 13px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 9px -10px var(--primary-color);
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+
+.introduction .photo-card{
+    position: relative;
+    /* width: 100%; */
+}
+
+.introduction .introduction_section .micro-roasted{
+    background-color: var(--background-color);
+    padding: 18px 16px;
+    border: 1px solid var(--borders-color);
+    border-radius: 8px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 3;
+    display: flex;
+    gap: 12px;
+}
+
+.introduction .introduction_section .micro-roasted img{
+    padding: 11px 13px;
+    background-color: var(--image-background-color);
+    border-radius: 12px;
+}
+
+.introduction .introduction_section .micro-roasted h4{
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.introduction .introduction_section .micro-roasted span{
+    font-weight: 600;
+    display: block;
+        font-size: 14px;
+}
+
+
+@media screen and (max-width: 600px ){
+    .container{
+        width: calc( 100% - 32px);
+    }
+
+    header .icon{
+        display: none;
+    }
+
+    header .logo span{
+        font-size: 20px;
+        position: relative;
+        padding-left: 14px;
+    }
+
+    header .logo span::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #845326;
+        left: 0;
+        top: calc(50% - 5px);
+    }
+
+    header .pages{
+        display: none;
+    }
+
+    header .visit-us-section{
+        display: flex;
+        align-items: center;
+    }
+
+    header .visit-us{
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+
+    .introduction{
+        padding: 30px 0px;
+    }
+
+
+    .introduction h1{
+        padding: 20px 0px 10px;
+        font-size: 40px;
+    }
+
+    .introduction p {
+        font-size: 14px;
+    }
+
+    .introduction .buttons{
+        flex-direction: column;
+        padding: 20px 0 24px;
+    }
+
+    .introduction .statistics{
+        border: 1px solid var(--borders-color);
+        border-radius: 8px;
+        padding: 12px 8px;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .introduction .statistics h3{
+        padding: 0 16px;
+    }
+
+    .introduction .statistics h3:first-of-type{
+        padding-left: 16;
+    }
+
+    .introduction .ceramic_cup_div{
+        position: static;
+    }
+
+    .introduction .ceramic_cup_div::before{
+        content: none;
+    }
+
+    .introduction .ceramic_cup_img{
+        background-color: white;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .introduction .photo-card{
+        position: relative;
+    }
+
+    .introduction .introduction_section .micro-roasted{
+        padding: 4px 10px;
+        bottom: 12px;
+        left: 12px;
+    }
+
+    .introduction .introduction_section .micro-roasted img{
+        padding: 6px 7px;
+    }
+
+    .introduction .introduction_section .micro-roasted h4,
+    .introduction .introduction_section .micro-roasted span{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px ){
+    .container{
+        width: calc( 100% - 50px);
+    }
+
+    header .icon{
+        display: none;
+    }
+
+    header .logo span{
+        font-size: 20px;
+        position: relative;
+    }
+
+    header .logo span::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #845326;
+        left: -14px;
+        top: calc(50% - 5px);
+    }
+
+    header .visit-us{
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .burger-nav-icon {
+        display: none;
+    } 
+}
+
+@media screen and (min-width: 901px ){
+    .burger-nav-icon {
+        display: none;
+    } 
+}
