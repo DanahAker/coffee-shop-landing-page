@@ -14,6 +14,7 @@ header{
     top: 0;
     z-index: 15;
     box-shadow: 0 6px 9px -10px var(--primary-color);
+    background-color: var(--background-color);
 
 }
 
@@ -62,7 +63,7 @@ header .burger-nav-icon {
     padding: 90px 0px 95px;
 }
 
-.tag{
+.introduction .tag{
     color: var(--tag-color);
     font-size: 12px;
     padding: 6px 14px;
@@ -71,7 +72,7 @@ header .burger-nav-icon {
     border-radius: 12px;
 }
 
-.tag img{
+.introduction .tag img{
     padding-right: 8px;
 }
 
@@ -108,6 +109,7 @@ header .burger-nav-icon {
     border: 1px solid var(--primary-color);
     color: var(--primary-color); 
     padding: 14px 28px;
+    background-color: var(--background-color);
 }
 
 .introduction .statistics{
@@ -202,6 +204,112 @@ header .burger-nav-icon {
     font-weight: 600;
     display: block;
         font-size: 14px;
+}
+
+.customer-favorites{
+    background-color: var(--second-background-color);
+    padding: 113px 0;
+}
+
+.customer-favorites .title{
+    text-align: center;
+    padding: 0 0 64px;
+}
+
+.customer-favorites .tag{
+    color: var(--tag-color);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.customer-favorites p{
+    font-size: 16px;
+}
+
+.customer-favorites .favorites-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:33px;
+    justify-content: space-between;
+    
+}
+
+.customer-favorites .favorites-card{
+    flex: 1 1 280px;
+    border-radius: 8px;
+    background-color: white;
+    max-width: 400px;
+}
+
+.customer-favorites .favorites-cards .image-section{
+    position: relative;
+    box-sizing: border-box;
+}
+
+.customer-favorites .favorites-card .image-section img{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
+
+.customer-favorites .favorites-card .tag{
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding: 4px 8px;
+    color: var(--tag-color);
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.customer-favorites .favorites-card .price{
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 4px 12px;
+    color: white;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+.customer-favorites .description{
+    padding: 24px;
+}
+
+.customer-favorites .description h3{
+    font-size: 20px;
+}
+
+.customer-favorites .description p{
+    font-size: 14px;
+    padding: 8px 0 16px;
+    border-bottom: 1px solid var(--borders-color);
+}
+
+.customer-favorites .description .ingredients-bar{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--secondary-color);
+    padding: 8px 0 0;
+}
+
+.customer-favorites .description progress{
+    accent-color: var(--tag-color);
+    width: 100%;
+}
+
+.customer-favorites .description .order-now{
+    background-color: var(--image-background-color);
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 4px;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.customer-favorites .description .order-now a{
+    padding-right: 8px;
 }
 
 
@@ -315,6 +423,75 @@ header .burger-nav-icon {
         font-size: 12px;
     }
 
+
+    .customer-favorites{
+        padding: 33px 0;
+    }
+
+    .customer-favorites .title{
+        padding: 0 0 20px;
+    }
+
+    .customer-favorites h2{
+        font-size: 28px;
+    }
+
+    .customer-favorites p{
+        font-size: 14px;
+    }
+
+    .customer-favorites .favorites-card .tag{
+        display: none;
+    }
+
+    .customer-favorites .favorites-card .price{
+        background-color: var(--background-color);
+        border-radius: 12px;
+        padding: 4px 8px;
+        color: var(--tag-color);
+        top: 23px;
+        right: 23px;
+        bottom: auto;
+        font-size: 14px;
+    }
+
+    .customer-favorites .description{
+        padding: 0 13px 13px;
+    }
+
+    .customer-favorites .description p{
+        border-bottom: none;
+        padding-bottom: 12.5px;
+    }
+
+    .customer-favorites .description .ingredients-bar{
+        display: none;
+    }
+
+    .customer-favorites .description progress{
+        display: none;
+    }
+
+    .customer-favorites .description .order-now{
+        background-color: var(--primary-color);
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .customer-favorites .description .order-now a{
+        color: var(--background-color);
+        font-size: 12px;
+    }
+
+    .customer-favorites .description .order-now img{
+        display: none;
+
+    }
+
+    .customer-favorites .favorites-cards .image-section{
+        padding: 13px;
+    }
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px ){
@@ -351,6 +528,11 @@ header .burger-nav-icon {
     .burger-nav-icon {
         display: none;
     } 
+
+
+    .customer-favorites .favorites-cards{
+        gap: 20px;
+    }
 }
 
 @media screen and (min-width: 901px ){
