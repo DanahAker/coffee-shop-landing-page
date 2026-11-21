@@ -9,6 +9,27 @@
     --second-background-color: #FCF2E8;
 }
 
+.light-hover{
+    transition: all .3s !important;
+}
+
+.light-hover:hover{
+    background-color: var(--secondary-color) !important;
+}
+
+.dark-hover{
+    transition: all .7s !important;
+}
+
+.dark-hover:hover{
+    background-color: var(--primary-color) !important;
+    color: var(--background-color) !important;
+}
+
+.dark-hover:hover a {
+    color: var(--background-color) !important;
+}
+
 header{
     position: sticky;
     top: 0;
@@ -42,6 +63,25 @@ header .pages-list{
     gap: 32px;
     color: var(--secondary-color);
     font-size: 14px;
+}
+
+header .pages-list li {
+    position: relative;
+}
+
+header .pages-list li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+header .pages-list li:hover::after {
+    width: 100%;
 }
 
 header .visit-us{
@@ -238,6 +278,11 @@ header .burger-nav-icon {
     border-radius: 8px;
     background-color: white;
     max-width: 400px;
+    transition: all .4s;
+}
+
+.customer-favorites .favorites-card:hover{
+    transform: scale( 1.05, 1.05);
 }
 
 .customer-favorites .favorites-cards .image-section{
@@ -471,6 +516,172 @@ header .burger-nav-icon {
     background-color: var(--tag-color);
     border: 1px var(--tag-color) solid;
 }
+
+.visit-our-section{
+    display: none;
+}
+
+.visit-our-section .address h3{
+    display: flex;
+    align-items: center;
+}
+
+footer{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 48px 0;
+}
+
+footer .row{
+    gap: 48px;
+    align-items:flex-start;
+    border-bottom: 1px solid var(--borders-color);
+    padding-bottom: 46px;
+}
+
+
+footer .logo-section{
+    flex: 3;
+}
+
+ footer .coffee-dispatch{
+    flex:  2 ;
+}
+
+footer .quick-links, footer .opening-hours{
+    flex: 1;
+}
+
+footer .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .logo .icon{
+    background-color: var(--tag-color);
+    padding: 9.25px;
+    border-radius: 4px;
+}
+
+footer .logo span{
+    font-family: 'playfair display';
+    font-size: 28px;
+}
+
+footer .logo-section p{
+    font-size: 14px;
+    margin: 15px 0  20px;
+}
+
+footer .icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+footer .icons li{
+    padding: 10.5px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+}
+
+footer .icons svg{
+    width: 26px;
+    fill: var(--background-color);
+}
+
+footer .quick-links h2, footer .quick-links li a{
+    font-size: 14px;
+    color: var(--background-color);
+    line-height: 22.4px;
+    letter-spacing: .14px;
+}
+
+footer .quick-links li{
+    margin-top: 12px;
+}
+
+footer .opening-hours h2{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+footer .opening-hours span{
+    font-weight: 400;
+    display: block;
+    padding-top: 4px;
+}
+
+footer .opening-hours .open-now{
+    margin-top: 23px;
+    position: relative;
+    padding-left: 20px;
+
+}
+
+footer .opening-hours .open-now::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    top: calc(50% - 5px);
+    left: 0;
+}
+
+footer .coffee-dispatch h2, footer .coffee-dispatch p{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+footer .coffee-dispatch .enter-your-email{
+    display: flex;
+    margin-bottom: 8px;
+}
+
+footer .coffee-dispatch .enter-your-email input[type="text"]{
+    padding: 10px 12px;
+    background-color: var(--secondary-color);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    margin-right: 0;
+}
+
+footer .coffee-dispatch .enter-your-email button{
+    padding: 12px 16px;
+    background-color: var(--tag-color);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid var(--tag-color);
+    margin-left: 0;
+}
+
+footer .last-line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+
+footer .last-line p{
+    font-size: 14px;
+}
+
+footer .last-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:56px
+}
+
+footer .last-list li a{
+    color: var(--background-color);
+}
+
 
 @media screen and (max-width: 600px ){
     .container{
@@ -747,6 +958,61 @@ header .burger-nav-icon {
 
     .welcome-special .btns .second-btn{
         width: 100%;
+    }
+
+    footer{
+        padding: 32px 20px;
+    }
+
+    footer .row{
+        gap: 0;
+        align-items:flex-start;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    footer .opening-hours, footer .coffee-dispatch{
+        display: none;
+    }
+
+
+    footer .logo-section, footer .quick-links{
+        flex: 1 1 100%;
+        border-bottom: 1px solid var(--borders-color);
+        padding-bottom: 24px;
+    }
+
+    footer .quick-links h2{
+        display: none;
+    }
+
+    footer .quick-links  .pages-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer .quick-links  .pages-list li{
+        flex: 1 1 50%;
+    }
+
+    footer .icons-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    footer .icons li{
+        padding: 6px 7px;
+        background-color: var(--secondary-color);
+        border-radius: 12px;
+    }
+
+    footer .icons svg{
+        width: 20px;
+    }
+
+    footer .last-line nav{
+        display: none;
     }
 
 
